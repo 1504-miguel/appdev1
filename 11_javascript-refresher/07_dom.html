@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!-- Button -->
+<button onclick="changeColor()">Change Background</button>
+
+<script>
+function changeColor() {
+  document.body.style.backgroundColor = "lightblue";
+}
+</script>
+
+
+
+
+<p id="displayColor"></p>
+
+<script>
+
+let favoriteColor = prompt("What is your favorite color?");
+
+
+document.getElementById("displayColor").innerHTML = "Your favorite color is: " + favoriteColor;
+</script>
+
+
+
+
+<p id="message"></p>
+
+<script>
+setTimeout(function() {
+  document.getElementById("message").innerHTML = "This message appears after 2 seconds";
+}, 2000);
+</script>
+</body>
+</html>
