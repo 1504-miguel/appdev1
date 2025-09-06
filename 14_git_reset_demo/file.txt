@@ -1,3 +1,4 @@
 "Line 1" 
 "Line 2"
 
+Realization : When i reset hard it i notice that if you reset the line 1, the line one only will left but if you reset the line 2 the only one going to left is the line 1 and 2, so if you reset the in the middle part the previous commit will be deleted.
