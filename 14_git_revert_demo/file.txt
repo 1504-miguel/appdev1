@@ -1,3 +1,5 @@
 "Line 1" 
 "Line 2" 
 "Line 3" 
+What did you notice about the file and commit history after revert?
+Answer : What did you notice about the file and commit history after revert?
