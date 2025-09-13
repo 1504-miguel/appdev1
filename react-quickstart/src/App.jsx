@@ -1,26 +1,12 @@
 import './App.css'
 
-function MyButtons() {
-  
+function Profile() {
   return (
     <>
-      <button>My Button</button>
-      <button>My Button</button>
-      <button>My Button</button>
-      <button>My Button</button>
-      <button>My Button</button>
-      <button>My Button</button>
+    <h1>Profile</h1>
+    <h3>Hello there! <br/> I am Nathaniel</h3>
     </>
   )
 }
 
-function App(){
-return (
-  <div>
-    <h1> This is my Buttons</h1>
-    <MyButtons/>
-  </div>
-)
-}
-
-export default App
+export default Profile
