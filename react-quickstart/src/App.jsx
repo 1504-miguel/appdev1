@@ -1,28 +1,55 @@
-import './App.css'
-
 import { useState } from "react";
+import './App.css';
 
-function App() {
-  const [count, setCount] = useState(0); 
 
-  function positiveClick() {
-    setCount(count + 1); 
-  }
-
-  function negativeClick() {
-    setCount(count - 1); 
-  }
-
+function MyAppSeparate() {
   return (
     <div>
-      <h1>Count: {count}</h1>
-      <button onClick={positiveClick}>Increase</button>
-      <button onClick={negativeClick}>Decrease</button>
+      <h1>Counters that update separately</h1>
+      <MyButton />
+      <MyButton />
     </div>
   );
 }
 
-export default App;
+function MyButton() {
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    setCount(count + 1);
+  }
+
+  return (
+    <button onClick={handleClick}>
+      Clicked {count} times
+    </button>
+  );
+}
 
 
 
+
+
+export default function MyApp() {
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    setCount(count + 1);
+  }
+
+  return (
+    <div>
+      <h1>Counters that update together</h1>
+      <MyButtonShared count={count} onClick={handleClick} />
+      <MyButtonShared count={count} onClick={handleClick} />
+    </div>
+  );
+}
+
+function MyButtonShared({ count, onClick }) {
+  return (
+    <button onClick={onClick}>
+      Clicked {count} times
+    </button>
+  );
+}
