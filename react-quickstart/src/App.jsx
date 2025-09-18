@@ -1,21 +1,22 @@
 import './App.css'
 
-function Name(){
-  const isTrue = true;
+function Fruit(){
+  const products = [
+  { title: 'Mango', id: 1 },
+  { title: 'Watermelon', id: 2 },
+  { title: 'Apple', id: 3 },
+];
 
-  let name;
-  if (isTrue) {
-    name = "Nath";
-  } else {
-    name = "Migs"
-  }
-  return(
-    <>
-    <h1>{name}</h1>
-    
-    </>
-  )
+const listItems = products.map(product =>
+  <li key={product.id}>
+    {product.title}
+  </li>
+);
+
+return (
+  <ul>{listItems}</ul>
+);
 
 }
 
-export default Name
+export default Fruit
