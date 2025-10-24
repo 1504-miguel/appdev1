@@ -1,14 +1,19 @@
 
 import './App.css'
 
-import ItemList from "./ItemList";
+let counter = 0;
+
+function Counter() {
+  counter += 1; // ❌ impure! don’t mutate global data
+  return <h1>Counter: {counter}</h1>;
+}
 
 export default function App() {
   return (
-    <div>
-      <h1>Shopping List</h1>
-      <ItemList />
-    </div>
+    <>
+      <Counter />
+      <Counter />
+      <Counter />
+    </>
   );
 }
-
