@@ -1,12 +1,14 @@
 
 import './App.css'
 
-export default function App() {
-  const isLoggedIn = true;
+import ItemList from "./ItemList";
 
+export default function App() {
   return (
     <div>
-      {isLoggedIn ? <h1>Welcome Back!</h1> : <h1>Please Log In</h1>}
+      <h1>Shopping List</h1>
+      <ItemList />
     </div>
   );
 }
+
