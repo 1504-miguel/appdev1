@@ -1,16 +1,12 @@
 
 import './App.css'
 
-import Avatar from "./Avatar";
-
 export default function App() {
+  const isLoggedIn = true;
+
   return (
     <div>
-      <h1>Props Example</h1>
-      <Avatar
-        name="Hedy Lamarr"
-        imageUrl="https://i.imgur.com/yXOvdOSs.jpg"
-      />
+      {isLoggedIn ? <h1>Welcome Back!</h1> : <h1>Please Log In</h1>}
     </div>
   );
 }
