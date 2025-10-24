@@ -10,8 +10,7 @@ function Profile() {
       alt="Katherine Johnson"
     />
   );
-}
-
+} 
 export default function Gallery() {
   return (
     <section>
