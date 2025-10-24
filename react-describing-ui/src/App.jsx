@@ -1,26 +1,16 @@
 
-import './App.css'
 
-const user = {
-  name: "Hedy Lamarr",
-  imageUrl: "https://i.imgur.com/yXOvdOSs.jpg",
-  imageSize: 90
-};
+
+import Avatar from "./Avatar";
 
 export default function App() {
   return (
     <div>
-      <h1>{user.name}</h1>
-      <img
-        className="photo"
-        src={user.imageUrl}
-        alt={user.name}
-        style={{
-          width: user.imageSize,
-          height: user.imageSize
-        }}
+      <h1>Props Example</h1>
+      <Avatar
+        name="Hedy Lamarr"
+        imageUrl="https://i.imgur.com/yXOvdOSs.jpg"
       />
     </div>
   );
 }
-
