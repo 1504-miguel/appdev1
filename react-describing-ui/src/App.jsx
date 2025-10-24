@@ -1,20 +1,25 @@
 
 import './App.css'
 
+const user = {
+  name: "Hedy Lamarr",
+  imageUrl: "https://i.imgur.com/yXOvdOSs.jpg",
+  imageSize: 90
+};
+
 export default function App() {
   return (
     <div>
-      <h1>Hedy Lamarr's Todos</h1>
+      <h1>{user.name}</h1>
       <img
-        src="https://i.imgur.com/yXOvdOSs.jpg"
-        alt="Hedy Lamarr"
         className="photo"
+        src={user.imageUrl}
+        alt={user.name}
+        style={{
+          width: user.imageSize,
+          height: user.imageSize
+        }}
       />
-      <ul>
-        <li>Invent new traffic lights</li>
-        <li>Rehearse a movie scene</li>
-        <li>Improve spectrum technology</li>
-      </ul>
     </div>
   );
 }
