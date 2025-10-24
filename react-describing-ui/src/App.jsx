@@ -1,8 +1,14 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 
+import Greeting from "./Greeting";
+
 export default function App() {
-  return <h1>Hello, React!</h1>;
+  return (
+    <div>
+      <h1>Multi-Component Example</h1>
+      <Greeting />
+    </div>
+  );
 }
+
