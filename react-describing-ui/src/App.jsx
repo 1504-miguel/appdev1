@@ -1,19 +1,29 @@
 
 import './App.css'
 
-let counter = 0;
+function Header() {
+  return <header><h1>Website Header</h1></header>;
+}
 
-function Counter({ number }) {
-  return <h1>Counter: {number}</h1>;
+function Main() {
+  return (
+    <main>
+      <section><h2>About</h2></section>
+      <section><h2>Projects</h2></section>
+    </main>
+  );
+}
+
+function Footer() {
+  return <footer><p>© 2025 My Website</p></footer>;
 }
 
 export default function App() {
   return (
-    <>
-      <Counter number={1} />
-      <Counter number={2} />
-      <Counter number={3} />
-    </>
+    <div>
+      <Header />
+      <Main />
+      <Footer />
+    </div>
   );
 }
-
