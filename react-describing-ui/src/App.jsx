@@ -1,29 +1,72 @@
-
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
 import './App.css'
+import Gallery from './components/Gallery';
+import ToDoList from './components/ToDoList';
+import Profile from './components/Profile';
+import PackingList from './components/PackingList';
+import List from './components/List';
+import Impure from './components/Impure';
+import Pure from './components/Pure';
+import RootComponent from './components/RootComponent';
 
-function Header() {
-  return <header><h1>Website Header</h1></header>;
-}
 
-function Main() {
+
+
+// function Profile() {
+//   return (
+//     <img
+//       src="https://i.imgur.com/MK3eW3As.jpg"
+//       alt="Katherine Johnson"
+//     />
+//   );
+// }
+
+
+function App() {
+
+
   return (
-    <main>
-      <section><h2>About</h2></section>
-      <section><h2>Projects</h2></section>
-    </main>
-  );
+    <>
+      {/* Done with how to write your first React component */}
+       <section>
+        <h1>Amazing scientists</h1>
+        <Profile />
+        <Profile />
+        <Profile />
+      </section>
+
+      {/* Done with when and how to create multi-component files */}
+      <Gallery/>
+
+      {/* Done with how to add markup to JavaScript with JSX */}
+      {/* Done with how to use curly braces with JSX to access JavaScript functionality from your components */}
+      <ToDoList/>
+
+      {/* Done with how to configure components with props */}
+      <Profile/>
+
+      {/* Done with how to conditionally render components */}
+      <PackingList/>
+
+      {/* Done with how to render multiple components at a time */}
+      <List/>
+
+      {/* Done with how to avoid confusing bugs by keeping components pure */}
+
+      <h1>Impure Component</h1>
+      <Impure/>
+      <h1>Pure Component</h1>
+      <Pure/>
+
+      {/* Done with why understanding your UI as trees is useful */}
+
+      <RootComponent/>
+      
+
+    </>
+  )
 }
 
-function Footer() {
-  return <footer><p>© 2025 My Website</p></footer>;
-}
-
-export default function App() {
-  return (
-    <div>
-      <Header />
-      <Main />
-      <Footer />
-    </div>
-  );
-}
+export default App
